@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="https://10.111.5.7/" />
+<link rel="selenium.base" href="https://10.111.5.12/" />
 <title>delete-account</title>
 </head>
 <body>
@@ -53,12 +53,12 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=#table-item-dropdown_ui-test-acct-${str} &gt; i.fi-widget</td>
+	<td>id=table-item-dropdown_ui-test-acct-${str}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//a[contains(text(),'Delete')])[6]</td>
+	<td>//ul[@id=&quot;item-dropdown_ui-test-acct-${str}&quot;]/li[2]/a</td>
 	<td></td>
 </tr>
 <tr>
