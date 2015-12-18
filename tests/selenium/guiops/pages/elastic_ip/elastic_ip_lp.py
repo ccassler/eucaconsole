@@ -7,6 +7,7 @@ class EipLanding(LandingPage):
     _elastic_ip_item_row_css_prefix = '#tableview tr[data-item-id="{0}"] td:last-child .actions'  # Requires EIP
     _elastic_ip_actions_menu_css = '{0} a.dropdown'.format(_elastic_ip_item_row_css_prefix)
     _elastic_ip_release_item_css = '{0} a.action-release '.format(_elastic_ip_item_row_css_prefix)
+    _elastic_ip_link = 'td>a[href="/ipaddresses/{0}"]'
     _more_actions_button_id = 'more-actions-btn'
     _more_actions_release_ip_css = '#more-actions-dropdown a.more-actions-release'
 
@@ -37,3 +38,6 @@ class EipLanding(LandingPage):
 
     def verify_elastic_ip_is_released(self, elastic_ip):
         self.tester.wait_for_element_not_present_by_css(self._elastic_ip_checkbox_css.format(elastic_ip))
+
+    def click_elastic_ip(self, elastic_ip):
+        self.tester.click_element_by_css(self._elastic_ip_link.format(elastic_ip))
