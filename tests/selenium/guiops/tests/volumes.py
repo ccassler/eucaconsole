@@ -37,7 +37,7 @@ class VolumeOperationsSequence(GuiOps):
         self.tester.attach_volume_from_volume_lp(instance1_id, volume1_id, timeout_in_seconds=800)
         self.tester.terminate_instance_from_view_page(instance1_id)
         self.tester.delete_volume_from_view_page(volume1_id)
-        volume2 = self.tester.create_volume_from_dashboard(volume_size=3, availability_zone="two")
+        volume2 = self.tester.create_volume_from_dashboard(volume_size=3, availability_zone="one")
         volume2_id = volume2.get("volume_id")
         self.tester.delete_volume_from_detail_page(volume2_id)
         self.sortable_volumes_tables_test()

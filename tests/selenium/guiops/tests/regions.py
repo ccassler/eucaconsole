@@ -27,7 +27,7 @@ class RegionOperationsSequence(GuiOps):
         volume1_id = volume1.get("volume_id")
 
         self.tester.change_region(regions[1])
-        volume2 = self.tester.create_volume_from_dashboard(volume_size=1, availability_zone="two")
+        volume2 = self.tester.create_volume_from_dashboard(volume_size=1, availability_zone="one")
         volume2_id = volume2.get("volume_id")
 
         self.tester.change_region(regions[0])
